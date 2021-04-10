@@ -1,61 +1,48 @@
 
-const router = express.Router();
+/*async function dataHandler() {
+  const endpoint = '/api/meals';
+  console.log(endpoint);
+  const request = await fetch(endpoint);
+  const meals = await request.json();
+  return meals;
 
-const Sequelize = require('sequelize');
-const sequelize = new Sequelize({
-  // The `host` parameter is required for other databases
-  host: 'localhost',
-  dialect: 'sqlite',
-  storage: './database.sqlite'
-});
+}
 
-/* app.route('/api', 'Dininghall')
-    .fetch()
-
-    const request = await fetch('/api')
-    .then(blob => blob.json())
-    .then(data => rtype.push(...data));
-  const rtype = await request.json();
-  function findMatches(wordToMatch, rtype) {
-    return rtype.filter(rtype => {
-      const regex = new RegExp(wordToMatch, "gi");
-      return rtype.category.match(regex) || rtype.city.match(regex);
-    });
-  }
-  
-  function displayMatches(event) {
-    const matchedArray = findMatches(event.target.value, rtype);
-    const html = matchedArray.map(rtype => {
-      const regex = new RegExp(event.target.value, "gi");
-      const catHigh = rtype.category.replace(regex, `<span class='hl'>${event.target.value}</span>`);
-      return `
-        <li>
-        <span class="name">${rtype.name},${catHigh}</span>
-        
-        <span class="statecode">${rtype.address_line_1},
-        ${rtype.address_line_1},
-        ${rtype.city}${rtype.zip}
-        </span>
-        
-        </li>
-        `;
-    }).join('');
-  
-    suggestions.innerHTML = html;
-  }*/
+// This function loads the dining halls into the table
 
 
-<!DOCTYPE HTML>
-<html>
-<head>  
-<script>
+// Once the request is successfully retrieved, pass the data into our table function
+dataHandler().then(meals => {
+  console.log(meals);
+
+ // for (i = 0; i < dininghalls.data.length; i += 1) {
+   // loadTableData(dininghalls.data[i]);
+//  }
+})*/
+
 window.onload = function () {
 
-var chart = new CanvasJS.Chart("chartContainer", {
+
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  
+    console.log(getRandomInt(3));
+    // expected output: 0, 1 or 2
+    
+    //console.log(getRandomInt(1));
+    // expected output: 0
+    
+    //console.log(Math.random());
+    // expected output: a number from 0 to <1
+  
+
+const chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2", //"light1", "dark1", "dark2"
 	title:{
-		text: "Division of Products Sold in 2nd Quarter"             
+		text: "Meals and their Macros"             
 	},
 	axisY:{
 		interval: 10,
@@ -111,12 +98,4 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 chart.render();
-
 }
-</script>
-</head>
-<body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-</body>
-</html>
