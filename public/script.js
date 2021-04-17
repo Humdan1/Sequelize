@@ -22,7 +22,7 @@ async function dataHandler() {
 	  return data;
 	}
   
-	// Create chart variable
+	// Create the chart variable
 	const chart = new CanvasJS.Chart('chartContainer', {
 	  animationEnabled: true,
 	  title: {
@@ -87,7 +87,7 @@ async function dataHandler() {
   
 	chart.render();
   
-	// Render chart
+	// Render the chart
 	function toggleDataSeries(e) {
 	  if (typeof (e.dataSeries.visible) === 'undefined' || e.dataSeries.visible) {
 		e.dataSeries.visible = false;
