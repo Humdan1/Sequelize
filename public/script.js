@@ -1,8 +1,5 @@
 async function dataHandler() {
-	// Retrieve dining, meals and macros endpoints
-	const endpoint1 = '/api/dining';
-	const request1 = await fetch(endpoint1);
-	const dininghalls = await request1.json();
+	// Retrieve meals and macros endpoints
   
 	const endpoint2 = '/api/meals';
 	const request2 = await fetch(endpoint2);
