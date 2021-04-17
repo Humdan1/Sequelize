@@ -9,7 +9,6 @@ async function dataHandler() {
 	const request3 = await fetch(endpoint3);
 	const macros = await request3.json();
   
-	console.log(dininghalls);
 	console.log(meals);
 	console.log(macros);
   
